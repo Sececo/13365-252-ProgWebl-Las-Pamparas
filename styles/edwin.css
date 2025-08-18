@@ -1,0 +1,119 @@
+/* Estilos básicos sin efectos visuales */
+
+/* Fuente y fondo general */
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  margin: 0;
+  padding: 0;
+  color: #232526;
+  min-height: 100vh;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  margin-top: 32px;
+  font-size: 2.4em;
+  letter-spacing: 1px;
+  color: #2b5876;
+}
+
+/* Secciones principales */
+section {
+  background: #fff;
+  margin: 28px auto;
+  max-width: 600px;
+  border-radius: 14px;
+  padding: 28px 32px 22px 32px;
+}
+
+/* Subtítulos */
+h2 {
+  color: #2b5876;
+  margin-top: 0;
+  font-size: 1.3em;
+  border-left: 4px solid #2b5876;
+  padding-left: 10px;
+  letter-spacing: 0.5px;
+}
+
+/* Listas */
+ul, ol {
+  margin-left: 24px;
+  font-size: 1.08em;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* Galería de imágenes */
+section img {
+  display: inline-block;
+  margin: 12px 18px 8px 0;
+  border-radius: 10px;
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border: 2px solid #e0eafc;
+}
+
+/* Figcaption (descripciones visibles) */
+figure {
+  display: inline-block;
+  margin: 12px 18px 18px 0;
+  text-align: center;
+  vertical-align: top;
+}
+figcaption {
+  font-size: 0.98em;
+  color: #444;
+  background: #f5f7fa;
+  border-radius: 6px;
+  padding: 4px 8px;
+  max-width: 180px;
+  margin: 6px auto 0 auto;
+}
+
+/* Enlace destacado centrado */
+a {
+  display: block;
+  width: fit-content;
+  margin: 24px auto 0;
+  text-align: center;
+  background: linear-gradient(90deg, #2b5876 0%, #4e4376 100%);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.08em;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 18px 0 10px 0;
+  background: #2b5876;
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  section {
+    max-width: 96vw;
+    padding: 18px 6vw 14px 6vw;
+  }
+  section img {
+    width: 95vw;
+    max-width: 320px;
+    height: auto;
+    margin: 10px 0 8px 0;
+  }
+}
