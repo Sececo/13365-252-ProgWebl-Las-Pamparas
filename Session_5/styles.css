@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    padding: 5px;
+}
+
+.container {
+    border: 2px dashed black;
+    padding: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cajas se acomoden si no caben */
+    gap: 10px;       /* Espacio entre cajas */
+}
+
+.item {
+    background: lightblue;
+    border: 2px solid blue;
+    padding: 10px;
+    margin: 5px;
+    flex: 1 1 120px; /* Hace que las cajas sean flexibles y responsivas */
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
