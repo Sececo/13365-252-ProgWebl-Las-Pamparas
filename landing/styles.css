@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+.header {
+    background-color: #ffb347;
+    padding: 20px;
+    text-align: center;
+}
+
+.main-container {
+    display: flex;
+    flex: 1;
+}
+
+.navbar {
+    flex: 0 0 220px;
+    background-color: #8300bb;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #1df800;
+}
+
+footer {
+    background-color: #0055a9;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px;
+}
