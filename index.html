@@ -5,32 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseño con Flexbox</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="js/scripts.js"></script>
+    
 </head>
 <body>
     <div class="container">
         <header class="header">
             <h1>Header</h1>
         </header>
-
         <div class="main-container">
             <nav class="navbar">
                 <h2>Navbar</h2>
                 <ul class="menu">
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a id="li-menu">Menú</a></li>
+                    <li><a id="li-products">Productos</a></li>
+                    <li><a id="li-services">Servicios</a></li>
+                    <li><a id="li-contact">Contacto</a></li>
                 </ul>
             </nav>
+            <main class="content-main">
+                <section id="menu-section">
+                    <h3>Body</h3>
+                    <p>Hola querido profesor</p>
+                </section>
+                <section id="products-section">
+                    <h3>Lista de Productos</h3>
+                    <ul>
+                        <li>Producto 1</li>
+                        <li>Producto 2</li>
+                        <li>Producto 3</li>
+                    </ul>
+                </section>
+                <section id="services-section">
+                    <h3>Lista de Servicios</h3>
+                    <ul>
+                        <li>Servicio 1</li>
+                        <li>Servicio 2</li>
+                        <li>Servicio 3</li>
+                    </ul>
+                </section>
+                <section id="contact-section">
+                    <h3>Contáctame</h3>
+                    <img src="data:image/png;base64,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" alt="Foto de contacto" width="150">
+                    <p>Email: <a href="edwinmolina154@gmail.com">edwinmolina154@gmail.com</a></p>
+                    <p>Teléfono: <a href="tel:3168302733">+57 3168302733</a></p>
 
-            <main class="content">
-                <h3>Body</h3>
-                <p>Hola querido profesor</p>
+                    <h3>Contáctame</h3>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACUCAMAAAA9M+IXAAAAM1BMVEX///+5ubn09PS2trb4+Pj7+/uzs7PAwMDx8fHU1NS8vLzi4uLe3t7o6OjExMSwsLDMzMyHFbplAAAGBElEQVR4nO2c63LjIAyFAwIMtiG8/9OucVrHbnzRweBkZ3Jm9kfbWfqNKoQkRG63r7766quv/l9p67veTeo7b/W7mdalbR9D0wohaNLwRduE2H8Ws5beNeae6NZEdDeN8/IzmAertsZsoE4yph2s/G7WWxdbsWXWv1YWbezeyWqdYaJOyMa9y8Q+0qEPrHgFRf8WWK4TvFhYXA5sA2XCjsAUrnQJ6TK8YCnj5FW0fXPCspOFm/4SWBnPsz4ULzBwf8ZplyKqbWB13mvnMk7VpB0CQknawcA1Q4Qv5wgTL1WLwX1x2BG4kgO7KrQDr6tBG4tusrlMLA6r6tFWCBA6VvKEh8iVLTXq0g68Rf2h7OGwJlNwv9WJYEuVi2e+PmxSofPCXkMrRJnzuER2yxE1JWhrHWYrvAW2W38VbNLp7SavcoUkas7WF7XPhz+8J08LX/18WMqcima6vZZWiPZM8nDFcbbUmcPNNlfTCtHkHxYZIZco9cujczH10jNqu/zgK+FfZkTsvZVqlLQ+daph3txghgYxavuEKicl5L5FV8kMZhI0TNPNUSdk3YE7wOSZ12G/xdkV2BHYoitlGRcxCgm/zvqQh1rXWUcxEnMp2D3awcBItyon9ipgo1HccoQnL7QcXsdbYPlwRAval/CjAih+22PaxMvPPzLKYvbaot3dZU95IF9CaeWdvbRj2Ha0Lz+e3dHYwE8XDoLCTDZw14QTB3bQJc807mBez7YBWBTz90XQXFopNTs6tFhs6Li0pmMbdzBvxw432NU823UDH1YC3os5L7udSw7ClVwzUERqNsnew4gvJG/grhuQUMbuOQbmEfErz7YDUsFzIw5hrjuIGxug67aeuYOH3AmjZed5Bkki2YGBewBPuNyDGAoN7OS0Hi5QYGr2EdyjuOz+a8OPZJq7ZkVcAeCyz8p6uAbA5Sa7hPsud1fc+biKjVstkIk7v7xklxJHBfuL+AUmUFDwK5+Gn5yPxvXsmFMFt1qKUwe3VgIJ4bK3WqpSEFqg1wBsNXYgS8UP5Av8XgsQyPjHRLqq4ePegMYIckzwVx0yPX7hzs1LRwG4SGu34bdFkGUDUKwhtxLsg5h/ACchNxTQwsSLvaqDFkXSc8jJhOA1TKEloeKH38waLVG6HS3A0hIcFjrmRWmxwp3fFvnhPUh1lEcvA6G2CDxDSO3eflMdfnUJDQpkXF5HuXUNmDFcD/aj+Yne8zfce/t6y6qU7dGHQUlYwxRInWbAjfNqeYWtvMuaPQLb0fxm/xK4Da6TSj8kOxdQp/0ROgGXPeyW3iymAYzQCMqerIevUoD6p4LgiyrgGjDJUNi+VCcR0JdtKC1yyTr89YegYKNYIx6+FYcf9g0wI5Bxycq+wqY2PsZEtE07a/HfKO09q8cg0UX2tsu4wmb2W8g4P50PyvreBWHud5P+iZAGiaYfSs98mkkhY9CfN37xZ5Jh/MJ633Xe2+kbz0SHdb5ljb4xhlsoYF2RlD0wMrO8OdOjRjdtTwvt8Fp3uOfyBt8OBrOoxfpjE/BRMpk5mLVfYA77IYs2BYldh8ie4d0dKgSbY0vgPT/LHircSRyAZsgq73btemJefrOPwazVd3g3q/gTA7FbsXe30uHyrmfUp97SrA9zn7btjn1PDXOvjspDAyJ7vGtrn3z48xrMyAEt0j3p1/hw+tnayzMPimVgk/5mEOefebw8ouH3R4/1EnkKvFlbBl/C04RtqWVSXeYF7twd4FvVA965Lco8AJs/r8OHWY40Tx8KPXd/9iMzk7BtqdnYabHH7tPhdiav2dBvNCv51P23LC4YFX71094q+fD257QovM8eeuy2ss+abzotSuVhk6j8o/H0JL+KcUfzmoxR/iNFAgcIufKFPeEh7StstCTr63xSWaFM7K+qfaxaFd6aHwJXfLNV/Vyc4ryVaQs7xBWfBljMwNVN+1CpWu0a2lsRA19k2jLA18IO0ieA1Ts+cDMX+C2wozKAL3eDhTATv8+wT2AusXqvYWfSh43/D7DrUpvI6uNQJw2esZD+WNKvvvrqq684+gf75GQuSIzjjgAAAABJRU5ErkJggg==" alt="Foto de contacto" width="150">
+                    <p>Email: <a href="01sebas.co@gmail.com">01sebas.co@gmail.com</a></p>
+                    <p>Teléfono: <a href="tel:3105118086">+57 3105118086</a></p>
+                </section>
             </main>
         </div>
-
         <footer class="footer">
             <h4>Footer</h4>
         </footer>
+        
     </div>
 </body>
 </html>
