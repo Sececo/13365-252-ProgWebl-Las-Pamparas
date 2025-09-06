@@ -67,3 +67,7 @@ footer {
 .menu a:hover {
     color: #ffb347;
 }
+
+#contact {
+    flex-direction: row;
+}
